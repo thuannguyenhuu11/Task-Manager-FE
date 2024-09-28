@@ -5,6 +5,12 @@ Task Manager App is a web application that helps users manage their daily tasks.
 ![image](https://github.com/user-attachments/assets/0a292b57-9f37-4e8a-8fbe-7df0241cdf72)
 
 
+## Deployment
+
+You can visit the production deployment on Vercel with the following link:
+
+[Task Manager](https://task-manager-fe-sigma.vercel.app/)
+
 ## Technologies Used
 
 ### Frontend
