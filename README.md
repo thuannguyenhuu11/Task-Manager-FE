@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Manager App
 
-## Getting Started
+Task Manager App is a web application that helps users manage their daily tasks. Users can log in, add new tasks, edit existing tasks, and delete unnecessary tasks. The application is built with a modern tech stack to ensure a smooth and efficient user experience.
 
-First, run the development server:
+![image](https://github.com/user-attachments/assets/0a292b57-9f37-4e8a-8fbe-7df0241cdf72)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: A React framework for building static and dynamic web applications.
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that helps write more maintainable and less error-prone code.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom user interfaces.
+- **Lucide-react**: A collection of SVG icons for React.
+- **React Context**: Used for managing user and task state within the application.
+- **Axios**: A promise-based HTTP client for making requests to the backend.
+- **React Hot Toast**: For displaying notifications.
 
-## Learn More
+### [Backend](https://github.com/thuannguyenhuu11/Task-Manager-BE)
 
-To learn more about Next.js, take a look at the following resources:
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Express**: A minimal and flexible Node.js web application framework.
+- **MongoDB**: A NoSQL database for storing user and task data.
+- **Mongoose**: An ODM (Object Data Modeling) library for MongoDB and Node.js.
+- **JWT**: For user authentication and authorization.
+- **bcrypt**: For hashing user passwords.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
 
-## Deploy on Vercel
+To install and run the frontend of this project on your machine, follow these steps:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/thuannguyenhuu11/Task-Manager-FE
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Install the dependencies:
+   ```sh
+   npm install
+
+3. Create a .env.local file and add the necessary environment variables:
+   ```sh
+   NEXT_PUBLIC_SERVER_URL=http://localhost:8000/api/v1 || Your backend deployed
+
+4. Run the application:
+   ```sh
+   npm run dev
+
+### Usage
+
+After installing and running the application, you can:
+
+- Register a new account or log in if you already have an account.
+- Add new tasks by clicking the "Add Task" button.
+- Edit existing tasks by clicking on the task.
+- Delete unnecessary tasks by clicking the trash icon.
