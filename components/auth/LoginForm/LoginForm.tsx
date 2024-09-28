@@ -1,6 +1,6 @@
-"use client";
-import { useUserContext } from "@/context/userContext";
-import React from "react";
+'use client';
+import { useUserContext } from '@/context/userContext';
+import React from 'react';
 
 function LoginForm() {
   const { loginUser, userState, handlerUserInput } = useUserContext();
@@ -12,15 +12,10 @@ function LoginForm() {
   return (
     <form className="relative m-[2rem] px-10 py-14 rounded-lg bg-white w-full max-w-[520px]">
       <div className="relative z-10">
-        <h1 className="mb-2 text-center text-[1.35rem] font-medium">
-          Login to Your Account
-        </h1>
+        <h1 className="mb-2 text-center text-[1.35rem] font-medium">Login to Your Account</h1>
         <p className="mb-8 px-[2rem] text-center text-[#999] text-[14px]">
-          Login Now. Don't have an account?{" "}
-          <a
-            href="/register"
-            className="font-bold text-[#2ECC71] hover:text-[#7263F3] transition-all duration-300"
-          >
+          Login Now. Don't have an account?{' '}
+          <a href="/register" className="font-bold text-[#2ECC71] hover:text-[#7263F3] transition-all duration-300">
             Register here
           </a>
         </p>
@@ -33,10 +28,10 @@ function LoginForm() {
             type="text"
             id="email"
             value={email}
-            onChange={(e) => handlerUserInput("email")(e)}
+            onChange={e => handlerUserInput('email')(e)}
             name="email"
             className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
-            placeholder="johndoe@gmail.com"
+            placeholder="Enter your email"
           />
         </div>
         <div className="relative mt-[1rem] flex flex-col">
@@ -44,18 +39,15 @@ function LoginForm() {
             Password
           </label>
           <input
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             id="password"
             value={password}
-            onChange={(e) => handlerUserInput("password")(e)}
+            onChange={e => handlerUserInput('password')(e)}
             name="password"
             className="px-4 py-3 border-[2px] rounded-md outline-[#2ECC71] text-gray-800"
             placeholder="***************"
           />
-          <button
-            type="button"
-            className="absolute p-1 right-4 top-[43%] text-[22px] text-[#999] opacity-45"
-          >
+          <button type="button" className="absolute p-1 right-4 top-[43%] text-[22px] text-[#999] opacity-45">
             {showPassword ? (
               <i className="fas fa-eye-slash" onClick={togglePassword}></i>
             ) : (
