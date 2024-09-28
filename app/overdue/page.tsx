@@ -4,7 +4,7 @@ import TaskItem from '@/components/TaskItem/TaskItem';
 import { useTasks } from '@/context/taskContext';
 import useRedirect from '@/hooks/useUserRedirect';
 import { Task } from '@/utils/types';
-import { filteredTasks } from '@/utils/utilities';
+import { filteredTasks, overdueTasks } from '@/utils/utilities';
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { container, item } from '@/utils/animations';
@@ -14,7 +14,9 @@ export default function Home() {
 
   const { tasks, openModalForAdd, priority, setPriority } = useTasks();
 
-  const filtered = filteredTasks(tasks, priority);
+  const overdue = overdueTasks(tasks);
+
+  const filtered = filteredTasks(overdue, priority);
 
   useEffect(() => {
     setPriority('all');
@@ -23,7 +25,7 @@ export default function Home() {
   return (
     <main className="m-6 h-full">
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">All Tasks</h1>
+        <h1 className="text-2xl font-bold">Overdue Tasks</h1>
         <Filters />
       </div>
 

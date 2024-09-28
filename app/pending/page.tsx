@@ -14,7 +14,9 @@ export default function Home() {
 
   const { tasks, openModalForAdd, priority, setPriority } = useTasks();
 
-  const filtered = filteredTasks(tasks, priority);
+  const pendingTasks = tasks.filter((task: Task) => !task.completed);
+
+  const filtered = filteredTasks(pendingTasks, priority);
 
   useEffect(() => {
     setPriority('all');
@@ -23,7 +25,7 @@ export default function Home() {
   return (
     <main className="m-6 h-full">
       <div className="flex justify-between">
-        <h1 className="text-2xl font-bold">All Tasks</h1>
+        <h1 className="text-2xl font-bold">Pending Tasks</h1>
         <Filters />
       </div>
 
